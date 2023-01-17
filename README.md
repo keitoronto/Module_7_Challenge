@@ -39,16 +39,20 @@ Part of the challenge here is to figure out how many tables you should create, a
 
 Feel free to discuss your database model design ideas with your classmates. You can use a tool like [Quick Database Diagrams](https://www.quickdatabasediagrams.com) to create your model.
 
+
 **Hints:** 
 
 * For the `credit_card` and `transaction` tables, the `card` column should be a VARCHAR(20) datatype rather than an INT.
 * For the `transaction` table, the `date` column should be a TIMESTAMP datatype rather than DATE.
 
+See the Fraud Detection DB Digram
+![Fraud Detection DB Digram](Images/Fraud_Detection_DB_Diagram.jpg)
+
+Fraud_Detection_DB_Diagram
+
 ### Data Engineering
 
 Using your database model as a blueprint, create a database schema for each of your tables and relationships. Remember to specify data types, primary keys, foreign keys, and any other constraints you defined.
-
-The database model is created as shown below. [Database Model](Images/"Fraud Detection DB Diagram.png")
 
 After creating the database schema, import the data from the corresponding CSV files.
 
@@ -97,7 +101,9 @@ Your CFO has also requested detailed trends data on specific card holders. Use t
   
   * Are there any outliers for cardholder ID 25? How many outliers are there per month?
 
-  * Do you notice any anomalies? Describe your observations and conclusions.
+  * Do you notice any anomalies? Describe your observations and conclusions. 
+<br><br>In average, cardholder ID 25's transactions are between $2 and $20. However, there are quite few outliers: These are outliers between January 2018 and June 2018. I would show data as the sequence of the amount and the date: $1,177 on Jan 30 at 6:31 pm, $1,334 on March 6 at 7:18 am, $100 on April 1 at 7:17 am, $1,063 on April 8 at 6:03 am, $269 on April 9 at 6:28 pm, $1,046 on May 13 at 6:31, $1,162 on June 4 at 3:46 am, $749 on June 6 at 9:50, and $1,813 on June 22 at 6:16 am. 
+![challenge starter notebook](Images/data_cardholderid_25.jpg)
 
 ### Challenge
 
@@ -117,6 +123,11 @@ For help with outliers detection, read the following articles:
 
 * [How to Use Statistics to Identify Outliers in Data](https://machinelearningmastery.com/how-to-use-statistics-to-identify-outliers-in-data/)
 
+* [Finding outliers in dataset using python](https://medium.datadriveninvestor.com/finding-outliers-in-dataset-using-python-efc3fce6ce32)
+
+### NOTE!
+
+Due to a plot rendring issue on GitHub, Please put the link: https://github.com/keitoronto/Module_7_Challenge/blob/main/visual_data_analysis.ipynb into [nbviewer](https://nbviewer.org/), which will show all plots 
 
 ---
 
